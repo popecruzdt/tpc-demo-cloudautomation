@@ -5,4 +5,9 @@ indicators:
   response_time_p90: metricSelector=builtin:service.response.time:merge("dt.entity.service"):percentile(90)&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-nginx)
   response_time_p95: metricSelector=builtin:service.response.time:merge("dt.entity.service"):percentile(95)&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-nginx)
   throughput: metricSelector=builtin:service.requestCount.total:merge("dt.entity.service"):sum&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-nginx)
+  tsn_homepage_response_time_avg: MV2;MicroSecond;metricSelector=calc:service.loadtest.tsn_response_time:filter(and(eq(Dimension,"01 Home Page"))):splitBy():avg&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-nginx)
   tsn_login_response_time_avg: MV2;MicroSecond;metricSelector=calc:service.loadtest.tsn_response_time:filter(and(eq(Dimension,"02 Login"))):splitBy():avg&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-nginx)
+  tsn_specialoffers_response_time_avg: MV2;MicroSecond;metricSelector=calc:service.loadtest.tsn_response_time:filter(and(eq(Dimension,"03 Special Offers"))):splitBy():avg&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-nginx)
+  tsn_validatecreditcard_response_time_avg: MV2;MicroSecond;metricSelector=calc:service.loadtest.tsn_response_time:filter(and(eq(Dimension,"04 Validate Credit Card"))):splitBy():avg&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-nginx)
+  tsn_bookjourney_response_time_avg: MV2;MicroSecond;metricSelector=calc:service.loadtest.tsn_response_time:filter(and(eq(Dimension,"05 Book Journey"))):splitBy():avg&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-nginx)
+  slo_booking_availability: SLO;d207ed75-3f7d-349a-a845-239ea17cce12
