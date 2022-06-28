@@ -1,9 +1,9 @@
 spec_version: "1.0"
 filter: {}
 comparison:
-  compare_with: single_result
+  compare_with: several_results
   include_result_with_score: pass
-  number_of_comparison_results: 1
+  number_of_comparison_results: 2
   aggregate_function: avg
 objectives:
 - sli: response_time_p95
@@ -11,6 +11,8 @@ objectives:
   pass:
   - criteria:
     - <2000
+  - criteria:
+    - <=+10%
   warning:
   - criteria:
     - <=2500
