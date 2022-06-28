@@ -17,6 +17,17 @@ objectives:
     - <=250
   weight: 1
   key_sli: false
+- sli: tsn_homepage_failure_rate
+  displayName: ""
+  pass:
+  - criteria:
+    - <=0
+    - <=+25%
+  warning:
+  - criteria:
+    - <=2
+  weight: 2
+  key_sli: false
 - sli: tsn_login_response_time_avg
   displayName: ""
   pass:
@@ -27,6 +38,17 @@ objectives:
   - criteria:
     - <=250
   weight: 1
+  key_sli: false
+- sli: tsn_login_failure_rate
+  displayName: ""
+  pass:
+  - criteria:
+    - <=0
+    - <=+25%
+  warning:
+  - criteria:
+    - <=2
+  weight: 2
   key_sli: false
 - sli: tsn_specialoffers_response_time_avg
   displayName: ""
@@ -39,6 +61,17 @@ objectives:
     - <=1000
   weight: 1
   key_sli: false
+- sli: tsn_specialoffers_failure_rate
+  displayName: ""
+  pass:
+  - criteria:
+    - <=0
+    - <=+25%
+  warning:
+  - criteria:
+    - <=2
+  weight: 2
+  key_sli: false
 - sli: tsn_validatecreditcard_response_time_avg
   displayName: ""
   pass:
@@ -49,6 +82,17 @@ objectives:
   - criteria:
     - <=500
   weight: 1
+  key_sli: false
+- sli: tsn_validatecreditcard_failure_rate
+  displayName: ""
+  pass:
+  - criteria:
+    - <=0
+    - <=+25%
+  warning:
+  - criteria:
+    - <=2
+  weight: 2
   key_sli: false
 - sli: tsn_bookjourney_response_time_avg
   displayName: ""
@@ -61,11 +105,40 @@ objectives:
     - <=500
   weight: 1
   key_sli: false
+- sli: tsn_bookjourney_failure_rate
+  displayName: ""
+  pass:
+  - criteria:
+    - <=0
+    - <=+25%
+  warning:
+  - criteria:
+    - <=2
+  weight: 2
+  key_sli: false
 - sli: throughput
   displayName: ""
   pass: []
   warning: []
   weight: 0
+  key_sli: false
+- sli: response_time_p95
+  displayName: ""
+  pass:
+  - criteria:
+    - <1000
+  warning:
+  - criteria:
+    - <2000
+  weight: 1
+  key_sli: false
+- sli: error_rate
+  displayName: ""
+  pass:
+  - criteria:
+    - <5
+  warning: []
+  weight: 1
   key_sli: false
 total_score:
   pass: 90%
