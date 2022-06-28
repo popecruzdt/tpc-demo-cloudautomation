@@ -1,7 +1,7 @@
 spec_version: "1.0"
 filter: {}
 comparison:
-  compare_with: single_result
+  compare_with: several_results
   include_result_with_score: pass
   number_of_comparison_results: 1
   aggregate_function: avg
@@ -22,7 +22,6 @@ objectives:
   pass:
   - criteria:
     - <=0
-    - <=+25%
   warning:
   - criteria:
     - <=2
@@ -44,7 +43,6 @@ objectives:
   pass:
   - criteria:
     - <=0
-    - <=+25%
   warning:
   - criteria:
     - <=2
@@ -66,7 +64,6 @@ objectives:
   pass:
   - criteria:
     - <=0
-    - <=+25%
   warning:
   - criteria:
     - <=2
@@ -88,7 +85,6 @@ objectives:
   pass:
   - criteria:
     - <=0
-    - <=+25%
   warning:
   - criteria:
     - <=2
@@ -110,7 +106,6 @@ objectives:
   pass:
   - criteria:
     - <=0
-    - <=+25%
   warning:
   - criteria:
     - <=2
