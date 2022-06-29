@@ -11,11 +11,11 @@ objectives:
   pass:
   - criteria:
     - <100
-    - <=+25%
+    - <=+50%
   warning:
   - criteria:
     - <=250
-  weight: 1
+  weight: 2
   key_sli: false
 - sli: tsn_homepage_failure_rate
   displayName: ""
@@ -25,18 +25,18 @@ objectives:
   warning:
   - criteria:
     - <=2
-  weight: 2
+  weight: 3
   key_sli: false
 - sli: tsn_login_response_time_avg
   displayName: ""
   pass:
   - criteria:
     - <100
-    - <=+25%
+    - <=+50%
   warning:
   - criteria:
     - <=250
-  weight: 1
+  weight: 2
   key_sli: false
 - sli: tsn_login_failure_rate
   displayName: ""
@@ -46,18 +46,18 @@ objectives:
   warning:
   - criteria:
     - <=2
-  weight: 2
+  weight: 3
   key_sli: false
 - sli: tsn_specialoffers_response_time_avg
   displayName: ""
   pass:
   - criteria:
     - <500
-    - <=+25%
+    - <=+50%
   warning:
   - criteria:
     - <=1000
-  weight: 1
+  weight: 2
   key_sli: false
 - sli: tsn_specialoffers_failure_rate
   displayName: ""
@@ -67,18 +67,18 @@ objectives:
   warning:
   - criteria:
     - <=2
-  weight: 2
+  weight: 3
   key_sli: false
 - sli: tsn_validatecreditcard_response_time_avg
   displayName: ""
   pass:
   - criteria:
     - <250
-    - <=+25%
+    - <=+50%
   warning:
   - criteria:
     - <=500
-  weight: 1
+  weight: 2
   key_sli: false
 - sli: tsn_validatecreditcard_failure_rate
   displayName: ""
@@ -88,18 +88,18 @@ objectives:
   warning:
   - criteria:
     - <=2
-  weight: 2
+  weight: 3
   key_sli: false
 - sli: tsn_bookjourney_response_time_avg
   displayName: ""
   pass:
   - criteria:
     - <250
-    - <=+25%
+    - <=+50%
   warning:
   - criteria:
     - <=500
-  weight: 1
+  weight: 2
   key_sli: false
 - sli: tsn_bookjourney_failure_rate
   displayName: ""
@@ -109,7 +109,7 @@ objectives:
   warning:
   - criteria:
     - <=2
-  weight: 2
+  weight: 3
   key_sli: false
 - sli: throughput
   displayName: ""
@@ -133,7 +133,7 @@ objectives:
   - criteria:
     - <5
   warning: []
-  weight: 1
+  weight: 2
   key_sli: false
 total_score:
   pass: 90%
