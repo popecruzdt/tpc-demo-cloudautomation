@@ -88,12 +88,10 @@ objectives:
   key_sli: false
 - sli: process_avail
   displayName: ""
-  pass:
-  - criteria:
-    - >99
+  pass: []
   warning: []
-  weight: 1
-  key_sli: true
+  weight: 0
+  key_sli: false
 - sli: container_cpu_limit
   displayName: ""
   pass:
