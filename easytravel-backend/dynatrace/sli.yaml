@@ -8,6 +8,5 @@ indicators:
   process_mem_avg: metricSelector=builtin:tech.generic.mem.usage:splitBy():avg&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:backend),tag(kubernetes-namespace:easytravel-nonprod)
   process_thread_avg: metricSelector=builtin:tech.jvm.threads.count:splitBy():avg&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:backend),tag(kubernetes-namespace:easytravel-nonprod)
   process_gc_avg: metricSelector=builtin:tech.jvm.memory.gc.suspensionTime:splitBy():avg&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:backend),tag(kubernetes-namespace:easytravel-nonprod)
-  #process_avail: metricSelector=builtin:pgi.availability:splitBy()&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:backend),tag(kubernetes-namespace:easytravel-nonprod)
-  container_cpu_limit: metricSelector=builtin:containers.cpu.usagePercent:filter(and(eq(Container,easytravel-backend))):splitBy()
-  container_mem_limit: metricSelector=builtin:containers.memory.usagePercent:filter(and(eq(Container,easytravel-backend))):splitBy()
+  container_cpu_limit: metricSelector=builtin:containers.cpu.usagePercent:filter(and(eq(Container,easytravel-backend))):splitBy()&entitySelector=type(CONTAINER_GROUP_INSTANCE),mzName(k8s-easytravel-nonprod)
+  container_mem_limit: metricSelector=builtin:containers.memory.usagePercent:filter(and(eq(Container,easytravel-backend))):splitBy()&entitySelector=type(CONTAINER_GROUP_INSTANCE),mzName(k8s-easytravel-nonprod)
