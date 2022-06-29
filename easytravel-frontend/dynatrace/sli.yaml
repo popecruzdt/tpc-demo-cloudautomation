@@ -10,3 +10,5 @@ indicators:
   process_gc_avg: metricSelector=builtin:tech.jvm.memory.gc.suspensionTime:splitBy():avg&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:frontend),tag(kubernetes-namespace:easytravel-nonprod)
   container_cpu_limit: metricSelector=builtin:containers.cpu.usagePercent:filter(and(eq(Container,easytravel-frontend))):splitBy()&entitySelector=type(CONTAINER_GROUP_INSTANCE),mzName(k8s-easytravel-nonprod)
   container_mem_limit: metricSelector=builtin:containers.memory.usagePercent:filter(and(eq(Container,easytravel-frontend))):splitBy()&entitySelector=type(CONTAINER_GROUP_INSTANCE),mzName(k8s-easytravel-nonprod)
+  appsec_vuln_critical: SECPV2;securityProblemSelector=status("open"),riskLevel("CRITICAL"),affectedPgNames("eks easytravel-nonprod.easytravel-frontend")
+  appsec_vuln_high: SECPV2;securityProblemSelector=status("open"),riskLevel("HIGH"),affectedPgNames("eks easytravel-nonprod.easytravel-frontend")

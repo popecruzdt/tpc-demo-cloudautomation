@@ -108,6 +108,22 @@ objectives:
     - <=90
   weight: 1
   key_sli: false
+- sli: appsec_vuln_critical
+  displayName: ""
+  pass:
+  - criteria:
+    - <=0
+  warning: []
+  weight: 1
+  key_sli: true
+- sli: appsec_vuln_high
+  displayName: ""
+  pass: []
+  warning:
+  - criteria:
+    - <=0
+  weight: 1
+  key_sli: false
 total_score:
   pass: 90%
   warning: 80%
