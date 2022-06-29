@@ -64,6 +64,60 @@ objectives:
     - <=50
   weight: 1
   key_sli: false
+- sli: process_thread_avg
+  displayName: ""
+  pass:
+  - criteria:
+    - <=40
+    - <=+25%
+  warning:
+  - criteria:
+    - <=60
+  weight: 1
+  key_sli: false
+- sli: process_gc_avg
+  displayName: ""
+  pass:
+  - criteria:
+    - <=5
+    - <=+100%
+  warning:
+  - criteria:
+    - <=10
+  weight: 1
+  key_sli: false
+- sli: process_avail
+  displayName: ""
+  pass:
+  - criteria:
+    - >=100
+  warning:
+  - criteria:
+    - >=99
+  weight: 1
+  key_sli: false
+- sli: container_cpu_limit
+  displayName: ""
+  pass:
+  - criteria:
+    - <=80
+    - <=+100%
+  warning:
+  - criteria:
+    - <=90
+  weight: 1
+  key_sli: false
+- sli: container_mem_limit
+  displayName: ""
+  pass:
+  - criteria:
+    - <=80
+    - <=+100%
+  warning:
+  - criteria:
+    - <=90
+  weight: 1
+  key_sli: false
 total_score:
   pass: 90%
   warning: 80%

@@ -6,3 +6,8 @@ indicators:
   throughput: metricSelector=builtin:service.requestCount.total:merge("dt.entity.service"):sum&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-angular-frontend)
   process_cpu_avg: metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:angular-frontend)
   process_mem_avg: metricSelector=builtin:tech.generic.mem.usage:splitBy():avg&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:angular-frontend)
+  process_thread_avg: metricSelector=builtin:tech.jvm.threads.count:splitBy():avg&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:angular-frontend)
+  process_gc_avg: metricSelector=builtin:tech.jvm.memory.gc.suspensionTime:splitBy():avg&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:angular-frontend)
+  process_avail: metricSelector=builtin:pgi.availability:splitBy()&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:angular-frontend)
+  container_cpu_limit: metricSelector=builtin:containers.cpu.usagePercent:filter(and(eq(Container,easytravel-angular-frontend))):splitBy()
+  container_mem_limit: metricSelector=builtin:containers.memory.usagePercent:filter(and(eq(Container,easytravel-angular-frontend))):splitBy()
