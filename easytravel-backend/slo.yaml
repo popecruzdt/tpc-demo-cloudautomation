@@ -24,7 +24,7 @@ objectives:
   warning:
   - criteria:
     - <=250
-  weight: 1
+  weight: 10
   key_sli: false
 - sli: response_time_p90
   displayName: ""
