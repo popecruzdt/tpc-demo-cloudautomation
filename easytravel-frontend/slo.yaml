@@ -77,7 +77,6 @@ objectives:
   pass:
   - criteria:
     - <=5
-    - <=+500%
   warning:
   - criteria:
     - <=10
