@@ -52,11 +52,11 @@ objectives:
   displayName: ""
   pass:
   - criteria:
-    - <500
+    - <1000
     - <=+50%
   warning:
   - criteria:
-    - <=1000
+    - <=2000
   weight: 2
   key_sli: false
 - sli: tsn_specialoffers_failure_rate

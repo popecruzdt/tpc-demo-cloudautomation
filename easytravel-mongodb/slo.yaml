@@ -46,22 +46,20 @@ objectives:
   displayName: ""
   pass:
   - criteria:
-    - <=30
-    - <=+25%
+    - <=80
   warning:
   - criteria:
-    - <=50
+    - <=90
   weight: 1
   key_sli: false
 - sli: process_mem_avg
   displayName: ""
   pass:
   - criteria:
-    - <=30
-    - <=+25%
+    - <=80
   warning:
   - criteria:
-    - <=50
+    - <=90
   weight: 1
   key_sli: false
 - sli: container_cpu_limit
@@ -69,7 +67,6 @@ objectives:
   pass:
   - criteria:
     - <=80
-    - <=+100%
   warning:
   - criteria:
     - <=90
@@ -80,7 +77,6 @@ objectives:
   pass:
   - criteria:
     - <=80
-    - <=+100%
   warning:
   - criteria:
     - <=90
