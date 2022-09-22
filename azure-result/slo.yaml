@@ -2,7 +2,7 @@ spec_version: "1.0"
 filter: {}
 comparison:
     compare_with: several_results
-    include_result_with_score: pass
+    include_result_with_score: all
     number_of_comparison_results: 1
     aggregate_function: avg
 objectives:
@@ -28,7 +28,7 @@ objectives:
       displayName: ""
       pass:
         - criteria:
-            - <5
+            - >=+5%
       warning: []
       weight: 0
       key_sli: false
