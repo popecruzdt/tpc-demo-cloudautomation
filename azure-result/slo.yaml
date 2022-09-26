@@ -33,14 +33,6 @@ objectives:
       warning: []
       weight: 0
       key_sli: false
-    - sli: host_connectivity
-      displayName: ""
-      pass:
-        - criteria:
-            - ">=95"
-      warning: []
-      weight: 0
-      key_sli: false
 total_score:
     pass: 90%
     warning: 75%
