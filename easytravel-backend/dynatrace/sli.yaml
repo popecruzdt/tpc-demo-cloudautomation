@@ -1,8 +1,8 @@
 spec_version: 0.1.4
 indicators:
   error_rate: metricSelector=builtin:service.errors.total.rate:merge("dt.entity.service"):avg&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-backend)
-  response_time_p50: metricSelector=builtin:service.response.time:merge("dt.entity.service"):percentile(50)&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-backend)
-  response_time_p90: metricSelector=builtin:service.response.time:merge("dt.entity.service"):percentile(90)&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-backend)
+  response_time_p50: metricSelector=builtin:service.response.time:toUnit(MicroSecond,MilliSecond):merge("dt.entity.service"):percentile(50)&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-backend)
+  response_time_p90: metricSelector=builtin:service.response.time:toUnit(MicroSecond,MilliSecond):merge("dt.entity.service"):percentile(90)&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-backend)
   throughput: metricSelector=builtin:service.requestCount.total:merge("dt.entity.service"):sum&entitySelector=type(SERVICE),tag(keptn_managed),tag(keptn_service:easytravel-backend)
   process_cpu_avg: metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:backend),tag(kubernetes-namespace:easytravel-nonprod)
   process_mem_avg: metricSelector=builtin:tech.generic.mem.usage:splitBy():avg&entitySelector=type(PROCESS_GROUP_INSTANCE),tag([Kubernetes]tier:backend),tag(kubernetes-namespace:easytravel-nonprod)
